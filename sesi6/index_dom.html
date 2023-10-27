@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM</title>
+</head>
+<body>
+    <h1>Belajar DOM</h1>
+
+    <form action="">
+        <div class ="class-group">
+            <label for="nama">Masukkan Nama</label>
+            <label class="" id="nama" name=""></label>
+        </div>
+    </form>
+    
+    <script>
+        // dokumen write
+        var hello = "Hello World YAL";
+        var in_hello = "<h2>" + hello + "</h2>";
+        document.write(hello);
+        document.write(in_hello);
+
+        var head = document.head
+        // cek tipe data
+        console.log(head);
+        document.write(typeof head);
+
+        var body = document.body;
+        console.log(body);
+        document.write(body.innerText);
+
+        document.write("<br>");
+
+        var tittle = document.title
+        document.write("panjang judul : " + tittle.length);
+        document.write("<br>");
+
+        document.createElement("p").textContent = "Hello World";
+        document.body.append("dicetak dengan document element : " + p_hello );
+
+        paragraf("belajar js");
+        document.write("<br>");
+
+        function paragraf(kata){
+            var paragraf = (document.createElement("p").textContent = kata);
+            document.write("<br>");
+            document.body.append(paragraf);
+            document.write("<br>");
+        }
+
+        var judul_saya = document.getElementById("judul_saya");
+        // tampilan
+        console.log("Sebelum dihapus : " + judul_saya.innerHTML);
+
+        console.log("Sesudah dihapus : " + judul_saya.innerHTML);
+        
+    </script>
+</body>
+</html>

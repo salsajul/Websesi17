@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        h1{
+            background-color: gold;
+            color:cadetblue;
+        }
+        label{
+            color:gold;
+        }
+        button{
+            background-color: gold;
+            color:cadetblue;
+        }
+        input{
+            background-color: gold;
+            color:cadetblue;
+        }
+    </style>
+  <title>Salsa Juliani Nuryadin</title>
+
+  <h1>Looping - Salsa Juliani Nuryadin</h1><br>
+  
+  <label for="message">Pesan:</label>
+  <input type="text" id="message" placeholder="Masukkan pesan"><br><br>
+  
+  <label for="count">Jumlah:</label>
+  <input type="number" id="count" placeholder="Jumlah pesan"><br><br>
+  
+  <button onclick="cetakPesan()">Cetak Pesan</button>
+  
+  <ol id="resultList"></ol>
+  
+  <script>
+    function cetakPesan() {
+      var message = document.getElementById("message").value;
+      var count = parseInt(document.getElementById("count").value);
+      var resultList = document.getElementById("resultList");
+      resultList.innerHTML = ''; // Menghapus hasil sebelumnya
+
+      // Menggunakan while loop
+      var i = 1;
+      while (i <= count) {
+        var listItem = document.createElement("li");
+        listItem.textContent = message + " (" + i + ")";
+        resultList.appendChild(listItem);
+        i++;
+      }
+
+      // Menggunakan for loop
+      for (var j = 1; j <= count; j++) {
+        var listItem = document.createElement("li");
+        listItem.textContent = message + " [" + j + "]";
+        resultList.appendChild(listItem);
+      }
+    }
+  </script>
+</body>
+</html>
